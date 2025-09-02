@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura of Intelligence Ecosystem | A Regenerative Civilization Protocol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #0a0b0f;
+            --card-background: #1a1c23;
+            --text-color: #e0e1e6;
+            --heading-color: #ffffff;
+            --neon-primary: #00f6ff;
+            --neon-secondary: #ff00c1;
+            --subtle-text: #8c8f9b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            text-shadow: 0 0 8px rgba(0, 246, 255, 0.4);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--subtle-text);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--heading-color);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--card-background);
+            text-shadow: 0 0 5px rgba(0, 246, 255, 0.3);
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 1px solid #2a2d35;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, var(--neon-primary), var(--neon-secondary));
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: var(--heading-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .card .entity {
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: var(--subtle-text);
+            margin-top: 1rem;
+            border-top: 1px solid #2a2d35;
+            padding-top: 1rem;
+        }
+        
+        /* Animation for cards */
+        .card.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        #documents-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        #documents-list li {
+            background-color: var(--card-background);
+            margin-bottom: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #2a2d35;
+        }
+        
+        #documents-list a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        #documents-list a:hover {
+            background-color: rgba(0, 246, 255, 0.1);
+            color: var(--neon-primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #2a2d35;
+            color: var(--subtle-text);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>The Aura of Intelligence Ecosystem</h1>
+            <p>A community-driven blueprint for a resilient, self-sustaining, and transcendent civilization, born from ancient wisdom and empowered by the pinnacle of human and artificial ingenuity.</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Foundational & Governance Entities</h2>
+                <div class="card-container">
+                    <div class="card hidden">
+                        <h3>1. Alpha Infinity Foundation</h3>
+                        <p>The Australian-based intellectual property (IP) steward for the entire ecosystem, providing global governance, compliance, licensing, and oversight for the C-hour time-banking ledger.</p>
+                        <p class="entity">Codified Entity: Charity (CLG)</p>
+                    </div>
+                    <div class="card hidden">
+                        <h3>2. GAJRA Earth – DAO & Tokenomics</h3>
+                        <p>A decentralized autonomous organization (DAO) governing the ecosystem's economics through "Joyful Responsible Abundance", using a dual ledger for financial returns (USD) and regenerative contributions (C-hours).</p>
+                        <p class="entity">Codified Entity: DAO-Bridge (CLG or Co-op)</p>
+                    </div>
+                    <div class="card hidden">
+                        <h3>3. The "Weaver" Regenerative Society Platform</h3>
+                        <p>A unified digital platform serving as the social operating system for the community, integrating a "Sovereign Skills Wallet", a "Lifelong Learning Hub", and the "Reciprocity Ledger" for the C-Hour Time Bank.</p>
+                        <p class="entity">Codified Entity: Co-operative or Public Benefit Corporation</p>
+                    </div>
+                </div>
+            </section>
+            
+            <hr>
+
+            <section>
+                <h2>Global Venture Capital</h2>
+                <div class="card-container">
+                    <div class="card hidden">
+                        <h3>4. 500 Queens Venture Capital</h3>
+                        <p>A seed-stage fund supporting women-led and values-aligned ventures, acting as the proof-of-concept for the multi-phase expansion model.</p>
+                        <p class="entity">Codified Entity: Pty Ltd + Unit Trust</p>
+                    </div>
+                    <div class="card hidden">
+                        <h3>5. 10,000 Queens Venture Capital</h3>
+                        <p>A mid-stage fund designed to scale successful ventures from the 500 Queens fund into global businesses, establishing a "G20 lattice" of 10,000 companies.</p>
+                        <p class="entity">Codified Entity: Pty Ltd + Unit Trust</p>
+                    </div>
+                    <div class="card hidden">
+                        <h3>6. 50,000 Queens Venture Capital</h3>
+                        <p>A civilizational-scale fund extending the model to enable tens of thousands of enterprises to participate in a global regenerative economy.</p>
+                        <p class="entity">Codified Entity: Pty Ltd + Unit Trust</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Global Commercial Ventures</h2>
+                <div class="card-container">
+                    <div class="card hidden"><h3>7. Aura of Intelligence (Core Platform)</h3><p>The foundational operating system for personal and collective digital twins, integrating AI models with human oversight for applications in health, education, and civic life.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>8. Aura Geode HBOT (Healing Pods)</h3><p>A venture developing and deploying crystal-inspired hyperbaric oxygen therapy (HBOT) pods as medical and wellness infrastructure, integrating AI-driven biometric monitoring.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>9. Aura for Dementia & Differently-Abled</h3><p>A specialized application of the Aura of Intelligence platform, creating AI-human collaborative systems to assist individuals with memory loss and neurodiverse needs via personalized digital twins.</p><p class="entity">Codified Entity: Pty Ltd (Health Tech)</p></div>
+                    <div class="card hidden"><h3>10. Aura AI In-Home Auto-Farm ("Mate" System)</h3><p>A suite of integrated AI-driven systems ("Garden Mate," "Kitchen Mate") for automated home food production, inventory management, and personalized nutrition.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>11. Aura Content Engine ("Mirror Universe" System)</h3><p>An autonomous system using a Mixture-of-Experts (MoE) AI to create original fiction and programmatically adapt it for diverse audiences and transmedia formats.</p><p class="entity">Codified Entity: Pty Ltd (as a division of Aura of Intelligence)</p></div>
+                    <div class="card hidden"><h3>12. Aura Universal Translation</h3><p>An AI-powered translation service for seamless global communication, built upon language data contributed by culturally diverse Aura of Intelligence instances.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>13. Aura Affinity Marketplace</h3><p>A dual-layer commerce and financial marketplace that aligns consumer values with capital allocation, providing a compliant bridge between traditional finance and crypto.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>14. Aura Innovation Labs</h3><p>Community-based research and prototyping spaces combining XR, AI, and fabrication, where volunteer mentorship and community-led innovation are measured in C-hours.</p><p class="entity">Codified Entity: Pty Ltd or CLG</p></div>
+                    <div class="card hidden"><h3>15. Aura Smart Pod Hotels</h3><p>A hospitality venture creating high-tech, sustainable lodging based on the "Capsule Hotel" concept, with pervasive Generative AI integrated into the guest experience.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>16. Aura of Entertainment</h3><p>A cultural platform that integrates festivals, XR concerts, and participatory media, with community volunteering tracked in C-hours.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>17. Aura Clothing & Wellness</h3><p>A consumer brand offering apparel and wellness products embedded with values, such as clothing with printed principles and functional drinks.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>18. A.I. Film Director Assistant</h3><p>A software platform using specialized AI agents to assist in the filmmaking process, from ideation and scriptwriting to storyboarding and post-production.</p><p class="entity">Codified Entity: Pty Ltd (as a SaaS product)</p></div>
+                    <div class="card hidden"><h3>19. Consciousness Parlor</h3><p>A physical wellness hub for the safe and ethical exploration of psychedelic therapies, biohacking, and somatic/erotic intelligence, guided by health professionals.</p><p class="entity">Codified Entity: Pty Ltd (as a licensed clinical and wellness facility)</p></div>
+                    <div class="card hidden"><h3>20. Cosmic Nexus UAP, AI, AA R&D Club</h3><p>A members club dedicated to research at the intersection of Unidentified Aerial Phenomena (UAP), Ancient Aeronautics (AA), AI, and Spiritual Science.</p><p class="entity">Codified Entity: Incorporated Association</p></div>
+                    <div class="card hidden"><h3>21. Gamify Democracy</h3><p>A platform that transforms civic participation into interactive engagement using game mechanics enhanced by AI, with community engagement rewarded through the C-hour system.</p><p class="entity">Codified Entity: Pty Ltd or CLG</p></div>
+                    <div class="card hidden"><h3>22. Global Group Marriages + XR Sex-Ed</h3><p>A venture providing frameworks and tools for new family models, supported by XR-based sexual education platforms and AI-assisted communication tools.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>23. I See Infinity Music</h3><p>A music venture integrating immersive XR performance with blockchain for transparent artist royalties, where volunteer creative work can be logged as C-hours.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>24. Mystic Mischief Merch™</h3><p>A rebellious merchandise line of "Techwear for the Transcendent," featuring apparel and accessories with esoteric designs and embedded technology like NFC chips.</p><p class="entity">Codified Entity: Pty Ltd (as a distinct brand from Aura Clothing)</p></div>
+                    <div class="card hidden"><h3>25. Sandworm Subterranean Technologies</h3><p>An infrastructure venture pioneering subterranean systems and tunneling for the development of resilient cities, managed with AI model oversight.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>26. Sovereign Space Builder (Application)</h3><p>A gamified, offline-first digital twin application that guides users in designing and managing personal regenerative systems, from home gardens to off-world habitats.</p><p class="entity">Codified Entity: Pty Ltd or Open Source Foundation</p></div>
+                    <div class="card hidden"><h3>27. Space Weather Hub</h3><p>A platform providing predictive analytics for solar phenomena and their impacts on critical infrastructure, generating revenue through enterprise SaaS subscriptions.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>28. Travel Oracle</h3><p>An AI-enhanced platform for designing values-based travel by integrating user Auras with global destination data to align with wellness and sustainability goals.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>29. Try Everything Workforce</h3><p>An adaptive employment and training company that certifies and supports workers across industries. AI models recommend pathways, and unpaid mentoring is tracked via C-hours.</p><p class="entity">Codified Entity: Pty Ltd or CLG</p></div>
+                    <div class="card hidden"><h3>30. "Welcome to Infinity" Coming-of-Age System</h3><p>A gamified and decentralized educational ecosystem serving as a modern rite of passage for young people into digital sovereignty and ethical consciousness.</p><p class="entity">Codified Entity: B-Corp or CLG</p></div>
+                    <div class="card hidden"><h3>31. Visionary Tours & Executive Conferences</h3><p>A boutique consulting and tourism service offering personalized workshops and tours on North Stradbroke Island with the ecosystem's founder, focused on long-term planning.</p><p class="entity">Codified Entity: Sole Trader or Pty Ltd</p></div>
+                </div>
+            </section>
+            
+            <hr>
+
+            <section>
+                <h2>Civilizational-Scale Mega-Projects</h2>
+                <div class="card-container">
+                    <div class="card hidden"><h3>32. "Shifting Sands" Subterranean Civilization (CCCQC)</h3><p>A masterplan for a resilient, self-sustaining subterranean crystal city on Minjerribah, designed to endure existential threats and foster a new chapter for humanity.</p><p class="entity">Codified Entity: Public-Private Partnership</p></div>
+                    <div class="card hidden"><h3>33. Global Subterranean Hyperloop Network</h3><p>An ambitious infrastructure project to engineer and construct a subterranean hyperloop network connecting continents, with proposed routes like Cairns-Antarctica and Australia-India.</p><p class="entity">Codified Entity: Global Infrastructure Consortium</p></div>
+                    <div class="card hidden"><h3>34. The Great Quandamooka Reef Project</h3><p>A large-scale ecological engineering project to create a vast artificial reef network in Moreton Bay using the excavated spoil from subterranean construction.</p><p class="entity">Codified Entity: Non-Profit Foundation</p></div>
+                    <div class="card hidden"><h3>35. Artificial Islands & Spaceports Project</h3><p>A project to use tunneling spoil to construct new artificial islands, designed to host critical infrastructure such as next-generation spaceports.</p><p class="entity">Codified Entity: Sovereign Development Authority</p></div>
+                </div>
+            </section>
+            
+            <hr>
+
+            <section>
+                <h2>Locally-Anchored Ventures (Minjerribah/North Stradbroke Island)</h2>
+                <div class="card-container">
+                    <div class="card hidden"><h3>36. Straddie Sovereign Wealth Fund (SSWF)</h3><p>A community discretionary trust designed to hold and manage locally-anchored sovereign assets like land, energy infrastructure, and facilities for the benefit of the local community.</p><p class="entity">Codified Entity: Community Discretionary Trust</p></div>
+                    <div class="card hidden"><h3>37. Straddie Employment and Training Company (SETCo)</h3><p>A training-focused charity to onboard and deploy local residents into jobs across the Straddie-based ecosystem (the local precursor to the "Try Everything Workforce").</p><p class="entity">Codified Entity: CLG (PBI eligible)</p></div>
+                    <div class="card hidden"><h3>38. Straddie Clean Energy Co.</h3><p>A company focused on creating energy sovereignty for North Stradbroke Island through microgrids, solar, and innovative battery sand technology.</p><p class="entity">Codified Entity: Pty Ltd</p></div>
+                    <div class="card hidden"><h3>39. Straddie Everything App (Straddie CORE)</h3><p>A unified "everything app" serving as a common operating system for all of Straddie's community clubs, venues, services, and transport.</p><p class="entity">Codified Entity: Community Co-operative</p></div>
+                    <div class="card hidden"><h3>40. Quandamooka Intelligence</h3><p>An Indigenous-led worker co-operative providing AI and software development services, ensuring technological sovereignty for the local Quandamooka people.</p><p class="entity">Codified Entity: Worker Co-op</p></div>
+                    <div class="card hidden"><h3>41. Quandamooka Film Festival</h3><p>A community film festival on Minjerribah celebrating storytelling through traditional, AI-generated, and smartphone-shot films.</p><p class="entity">Codified Entity: Incorporated Association or CLG</p></div>
+                    <div class="card hidden"><h3>42. Sandy Sports Club</h3><p>A community-focused incorporated association, owned by the SSWF, dedicated to cultural activation through sports, youth programs, and community events.</p><p class="entity">Codified Entity: Inc. Association (QLD)</p></div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="documents-list">
+                <h2>Source Documents & Blueprints</h2>
+                <ul>
+                    <li><a href="documents/01 Consciouness Parlor Chat.pdf" target="_blank">01 Consciouness Parlor Chat.pdf</a></li>
+                    <li><a href="documents/01 Regenerative Civilization Protocol.pdf" target="_blank">01 Regenerative Civilization Protocol.pdf</a></li>
+                    <li><a href="documents/02 Consciousness Parlor Deep Research Chat.pdf" target="_blank">02 Consciousness Parlor Deep Research Chat.pdf</a></li>
+                    <li><a href="documents/02 The Weaver Protocol.pdf" target="_blank">02 The Weaver Protocol.pdf</a></li>
+                    <li><a href="documents/03 Consciousness Parlor_ Annotated Research Matrix.pdf" target="_blank">03 Consciousness Parlor: Annotated Research Matrix.pdf</a></li>
+                    <li><a href="documents/03 Innovation Engine.pdf" target="_blank">03 Innovation Engine.pdf</a></li>
+                    <li><a href="documents/04 Aura of Intelligence BIZ Ecosystem.pdf" target="_blank">04 Aura of Intelligence BIZ Ecosystem.pdf</a></li>
+                    <li><a href="documents/1-page Meditation Sleep Mask.pdf" target="_blank">1-page Meditation Sleep Mask.pdf</a></li>
+                    <li><a href="documents/10 Companies All At Once.pdf" target="_blank">10 Companies All At Once.pdf</a></li>
+                    <li><a href="documents/500 Queens VC NEW Long.pdf" target="_blank">500 Queens VC NEW Long.pdf</a></li>
+                    <li><a href="documents/AI Kitchen Food Waste Solution.pdf" target="_blank">AI Kitchen Food Waste Solution.pdf</a></li>
+                    <li><a href="documents/Art Prompting for Rapid Storyboarding.pdf" target="_blank">Art Prompting for Rapid Storyboarding.pdf</a></li>
+                    <li><a href="documents/AURA Consciousness Parlor & GAJRA Earth Encampment.pdf" target="_blank">AURA Consciousness Parlor & GAJRA Earth Encampment.pdf</a></li>
+                    <li><a href="documents/AURA GEODE to MACRO.pdf" target="_blank">AURA GEODE to MACRO.pdf</a></li>
+                    <li><a href="documents/Aura Geode.pdf" target="_blank">Aura Geode.pdf</a></li>
+                    <li><a href="documents/Autonomous Mirror Universe Storytelling System_.pdf" target="_blank">Autonomous Mirror Universe Storytelling System.pdf</a></li>
+                    <li><a href="documents/Clinical Research Path for Aura of Dementia.pdf" target="_blank">Clinical Research Path for Aura of Dementia.pdf</a></li>
+                    <li><a href="documents/Cosmic Nexus UAP, AI, AA, R&D.pdf" target="_blank">Cosmic Nexus UAP, AI, AA, R&D.pdf</a></li>
+                    <li><a href="documents/Film Director A-i Assistant.pdf" target="_blank">Film Director A-i Assistant.pdf</a></li>
+                    <li><a href="documents/global subterranean hyperloop and micro nova.pdf" target="_blank">global subterranean hyperloop and micro nova.pdf</a></li>
+                    <li><a href="documents/Integrated Food System AI Expansion.pdf" target="_blank">Integrated Food System AI Expansion.pdf</a></li>
+                    <li><a href="documents/Quandamooka Film Festival.pdf" target="_blank">Quandamooka Film Festival.pdf</a></li>
+                    <li><a href="documents/Shifting Sands of a Timeless Land.pdf" target="_blank">Shifting Sands of a Timeless Land.pdf</a></li>
+                    <li><a href="documents/Sovereign Space Builder_ Full System Specification.pdf" target="_blank">Sovereign Space Builder: Full System Specification.pdf</a></li>
+                    <li><a href="documents/Space Weather Data IFTTT.pdf" target="_blank">Space Weather Data IFTTT.pdf</a></li>
+                    <li><a href="documents/Straddie Aura-GAJRA A4 Trifold Brochure.pdf" target="_blank">Straddie Aura-GAJRA A4 Trifold Brochure.pdf</a></li>
+                    <li><a href="documents/Straddie EverythingAPP chat plan.pdf" target="_blank">Straddie EverythingAPP chat plan.pdf</a></li>
+                    <li><a href="documents/Subterranean Crystal City Kardashev Ground Station.pdf" target="_blank">Subterranean Crystal City Kardashev Ground Station.pdf</a></li>
+                    <li><a href="documents/Version6 Aura of Intelligence 2022 June Grande.pdf" target="_blank">Version6 Aura of Intelligence 2022 June Grande.pdf</a></li>
+                </ul>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Architected by Luke Catalyst. &copy; 2025 Alpha Infinity Foundation.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple Intersection Observer for card fade-in animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll('.card.hidden');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        entry.target.classList.remove('hidden');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                rootMargin: '0px 0px -50px 0px' // Trigger a little before it's fully in view
+            });
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
