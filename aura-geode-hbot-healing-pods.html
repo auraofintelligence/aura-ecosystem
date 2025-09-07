@@ -36,7 +36,7 @@
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden; /* Prevent horizontal scrollbar from animations */
+            overflow-x: hidden;
         }
         
         body::before {
@@ -99,39 +99,34 @@
             backdrop-filter: blur(10px);
             border-radius: 16px;
             padding: 3rem;
-            position: relative; /* Needed for positioning the neon-card-bg */
+            position: relative;
             z-index: 1;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
             transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Adds a subtle edge to the glass */
         }
 
         .project-detail-container:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5), 
-                        0 0 20px var(--neon-primary), 
-                        0 0 40px var(--neon-secondary);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
         
-        /* --- ✨ New: Animated Gradient Background for the Card --- */
+        /* --- ✨ EDITED: Sharp, rotating background outline ✨ --- */
         .neon-card-bg {
             position: absolute;
-            top: -5px; /* Adjust to control how much border shows */
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border-radius: 20px; /* Slightly larger than card for glow */
+            top: -2px;      /* Controls the outline thickness (e.g., 2px) */
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 16px; /* Must match the parent card's border-radius */
             background: linear-gradient(145deg, var(--neon-primary), var(--neon-secondary));
-            z-index: -1; /* Place behind the content */
-            animation: rotateBackground 8s linear infinite; /* Slower rotation */
-            filter: blur(8px); /* Soften the glow */
-            opacity: 0.6; /* Make it more subtle */
-            transform: translateZ(0); /* Improve rendering performance */
+            z-index: -1;         /* Place it BEHIND the main card's content */
+            animation: rotateBackground 5s linear infinite;
         }
         
         @keyframes rotateBackground {
-            from { transform: rotate(0deg) scale(1.02); }
-            50% { transform: rotate(180deg) scale(1.05); } /* Slightly scale for breathing effect */
-            to { transform: rotate(360deg) scale(1.02); }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
         
         .project-detail-container h2 {
@@ -272,7 +267,7 @@
             header h1 { font-size: 2.5rem; }
             h2 { font-size: 1.8rem; }
             .project-detail-container { padding: 2rem; }
-            .models-container { flex-direction: column; } /* Stack cards on mobile */
+            .models-container { flex-direction: column; }
         }
     </style>
 </head>
@@ -286,7 +281,8 @@
         <main>
             <section>
                 <div class="project-detail-container">
-                    <div class="neon-card-bg"></div> <h2>Aura Geode HBOT (Healing Pods)</h2>
+                    <div class="neon-card-bg"></div>
+                    <h2>Aura Geode HBOT (Healing Pods)</h2>
                     <p>A venture developing and deploying crystal-inspired hyperbaric oxygen therapy (HBOT) pods as medical and wellness infrastructure, integrating AI-driven biometric monitoring.</p>
                     
                     <dl class="details-list">
